@@ -69,9 +69,9 @@ class CoursePagestate extends State<CoursePage> {
                     child: Column(
                       children: [
                         ...(corses[courseindex]['courses']
-                                as List<Map<String, dynamic>>)
+                                as List<String>)
                             .map((courses) {
-                          return Courses(courses, fullcourses());
+                          return Courses(courses, fullcourses);
                         }).toList()
 
                         // SizedBox(
