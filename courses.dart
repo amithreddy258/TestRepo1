@@ -236,17 +236,15 @@ class Courses extends StatelessWidget {
   Courses(this.text);
 
   Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      width: 200,
-      margin: EdgeInsets.all(5),
-      child: ElevatedButton(
-        onPressed: nice(context),
+    return InkWell(
+      onTap: movetoquizpage(context),
+      child: Container(
+        alignment: Alignment.center,
+        height: 60,
+        width: 200,
+        margin: EdgeInsets.all(5),
         child: Text(text),
-        style: ElevatedButton.styleFrom(
-          primary: Colors.deepPurple,
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        ),
+        decoration: BoxDecoration(color: Colors.white),
       ),
     );
   }
